@@ -6,6 +6,7 @@ public class Alumno {
     private static final int ESTADO_EGRESADO = 3;
     private static final int ESTADO_SUSPENDIDO = 0;
     private static final int ESTADO_EXPULSADO = -1;
+    private static final int ESTADO_ADVERTIDO = 4;
     
     private long id;
     private String codigo;
@@ -21,43 +22,48 @@ public class Alumno {
     -1: Expulsado
      */
     
-    public void cumplirCreditos(){
-        if(this.estado == ESTADO_MATRICULADO){
-            this.estado = ESTADO_EGRESADO;
-        }
-    }
-    
-    public void cumplirTiempo(){
-        if(this.estado == ESTADO_SUSPENDIDO){
-            this.estado = ESTADO_REGISTRADO;
-        }
-    }
-    
-    public void finalizarCiclo(){
-        if(this.estado == ESTADO_MATRICULADO){
-            this.estado = ESTADO_REGISTRADO;
-        }
-    }
-    
-    public void matricular(){
-        if(this.estado == ESTADO_REGISTRADO){
-            this.estado = ESTADO_MATRICULADO;
-        }
-    }
-    
-    public void cometerInfraccion(){
-        if(this.estado == ESTADO_REGISTRADO || this.estado == ESTADO_REGISTRADO){
-            this.estado = ESTADO_SUSPENDIDO;
-        }
-    }
-    
-    public void expulsar(){
-        if(this.estado == ESTADO_SUSPENDIDO 
-                || this.estado == ESTADO_REGISTRADO 
-                || this.estado == ESTADO_MATRICULADO){
-            this.estado = ESTADO_EXPULSADO;
-        }
-    }
+//    public void cumplirCreditos(){
+//        if(this.estado == ESTADO_MATRICULADO){
+//            this.estado = ESTADO_EGRESADO;
+//        }
+//    }
+//    
+//    public void cumplirTiempo(){
+//        if(this.estado == ESTADO_SUSPENDIDO){
+//            this.estado = ESTADO_REGISTRADO;
+//        }
+//    }
+//    
+//    public void finalizarCiclo(){
+//        if(this.estado == ESTADO_MATRICULADO){
+//            this.estado = ESTADO_REGISTRADO;
+//        }
+//    }
+//    
+//    public void matricular(){
+//        if(this.estado == ESTADO_REGISTRADO){
+//            this.estado = ESTADO_MATRICULADO;
+//        }
+//    }
+//    
+//    public void cometerInfraccion(){
+//        if(this.estado == ESTADO_REGISTRADO || this.estado == ESTADO_REGISTRADO){
+//            this.estado = ESTADO_SUSPENDIDO;
+//        }
+//    }
+//    
+//    public void expulsar(){
+//        if(this.estado == ESTADO_SUSPENDIDO 
+//                || this.estado == ESTADO_REGISTRADO 
+//                || this.estado == ESTADO_MATRICULADO){
+//            this.estado = ESTADO_EXPULSADO;
+//        }
+//    }
+//    public void imcumplirCondicion(){
+//        if(this.estado == ESTADO_ADVERTIDO){
+//            this.estado = ESTADO_REGISTRADO;
+//        }
+//    }
     
     public Alumno() {
         this.estado=1;
