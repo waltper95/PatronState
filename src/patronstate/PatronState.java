@@ -1,13 +1,12 @@
+
 package patronstate;
 
 public class PatronState {
 
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {        
         Alumno alumno1 = new Alumno();
-        alumno1.setEstado(2);
-        
-        
+        GestorMatricula gestor = new GestorMatricula();
+        gestor.matricular(alumno1);
     }
     
 }

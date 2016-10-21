@@ -1,10 +1,12 @@
-package patronstate;
+
+package patronstate.estados;
+
+import patronstate.Alumno;
 
 public class EstadoRegistrado implements EstadoAlumno{
-    
     private Alumno alumno;
     
-    public EstadoRegistrado (Alumno alumno){
+    public EstadoRegistrado(Alumno alumno){
         this.alumno = alumno;
     }
     
@@ -19,7 +21,7 @@ public class EstadoRegistrado implements EstadoAlumno{
     @Override
     public void cometerInfraccion() {
         this.alumno.setEstado(new EstadoSuspendido(this.alumno));
-        }
+    }
 
     @Override
     public void cumplirTiempo() {}
@@ -30,8 +32,7 @@ public class EstadoRegistrado implements EstadoAlumno{
     }
 
     @Override
-    public void cumplirCreditos() {
-        }
+    public void cumplirCreditos() {}
 
     @Override
     public void matricularAdvertidos() {
@@ -39,10 +40,9 @@ public class EstadoRegistrado implements EstadoAlumno{
     }
 
     @Override
-    public void cumplirCondicion() {
-        }
+    public void cumplirCondicion() {}
 
     @Override
-    public void imcumplirCondicion() {
-        }
+    public void incumplirComdicion() {}
+    
 }

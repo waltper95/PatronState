@@ -1,11 +1,15 @@
-package patronstate;
 
-public class EstadoAdvertido implements EstadoAlumno{
+package patronstate.estados;
+
+import patronstate.Alumno;
+
+public class EstadoExpulsado implements EstadoAlumno{
+    private Alumno alumno;
     
-    private Alumno alumno;  
-    
-    public EstadoAdvertido(Alumno alumno){this.alumno = alumno;}
-    
+    public EstadoExpulsado(Alumno alumno){
+        this.alumno = alumno;
+    }
+
     @Override
     public void matricular() {}
 
@@ -28,12 +32,9 @@ public class EstadoAdvertido implements EstadoAlumno{
     public void matricularAdvertidos() {}
 
     @Override
-    public void cumplirCondicion() {
-        
-    }
+    public void cumplirCondicion() {}
 
     @Override
-    public void imcumplirCondicion() {
-        
-    }
+    public void incumplirComdicion() {}
+    
 }
