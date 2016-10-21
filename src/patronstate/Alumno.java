@@ -11,13 +11,12 @@ public class Alumno {
     public static final int ESTADO_ADVERTIDO = 4;
     public static final int ESTADO_SUSPENDIDO = 0;
     public static final int ESTADO_EXPULSADO = -1;
-    
-    
+   
     private long id;
     private String codigo;
     private String nombre;
     // ...
-
+    
     private EstadoAlumno estado;
 
     public Alumno() {
